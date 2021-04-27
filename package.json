@@ -1,0 +1,36 @@
+{
+  "name": "npx-utils",
+  "version": "1.0.0",
+  "description": "Manages packages in the npx-space",
+  "bin": {
+    "npx-utils": "lib/index.js"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "test": "bash test.sh",
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "prepublishOnly": "git push origin --follow-tags"
+  },
+  "keywords": [
+    "npx",
+    "npm exec",
+    "utils",
+    "helper"
+  ],
+  "author": {
+    "name": "Ruy Adorno",
+    "url": "https://ruyadorno.com",
+    "twitter": "ruyadorno"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "ipt": "^3.2.0",
+    "libnpmexec": "^1.0.1",
+    "read-package-json-fast": "^2.0.2",
+    "trash": "^7.1.1"
+  }
+}
