@@ -2,7 +2,7 @@
 
 CACHEDIR=$(mktemp -d)
 
-export PATH="$PATH:$(pwd)/node_modules/.bin"
+export NPX_UTILS="node lib/index.js"
 export NPX_UTILS_CACHE="$CACHEDIR"
 
 mkdir -p "$CACHEDIR/_npx/db114a050477a6be"
@@ -12,7 +12,7 @@ echo "{
   }
 }" > "$CACHEDIR/_npx/db114a050477a6be/package.json"
 
-list_res=$(npx-utils list)
+list_res=$($NPX_UTILS list)
 
 if [ "$list_res" != "db114a050477a6be ruy@^1.0.0" ]; then
   >&2 echo "Failed to list pkgs"
@@ -20,8 +20,8 @@ if [ "$list_res" != "db114a050477a6be ruy@^1.0.0" ]; then
 fi
 
 # Removes the package and list again
-npx-utils remove ruy
-list_res=$(npx-utils list)
+$NPX_UTILS remove ruy
+list_res=$($NPX_UTILS list)
 
 if [ "$list_res" != "" ]; then
   >&2 echo "Failed to list pkgs after removing"
