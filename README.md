@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/npx-utils.svg)](https://npm.im/npx-utils)
 [![license](https://img.shields.io/npm/l/npx-utils.svg)](https://npm.im/npx-utils)
-[![GitHub Actions](https://github.com/npm/npx-utils/workflows/node-ci/badge.svg)](https://github.com/npm/npx-utils/actions?query=workflow%3Anode-ci)
+[![GitHub Actions](https://github.com/ruyadorno/npx-utils/workflows/node-ci/badge.svg)](https://github.com/ruyadorno/npx-utils/actions?query=workflow%3Anode-ci)
 
 Manages packages installed to the npx-space :space_invader:
 
