@@ -1,6 +1,6 @@
 {
   "name": "npx-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Manages packages in the npx-space",
   "files": [
     "lib"
